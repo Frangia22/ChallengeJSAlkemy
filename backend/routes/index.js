@@ -49,4 +49,15 @@ router.get('/balance', async (req, res) => {
         res.send(result);
     });
     });
+    //Add budget
+    router.post('/addBudget', (req, res) => {   
+      let {concept, amount, date, type, reference} = req.body;
+      db.personalBudget.create({
+          concept,
+          amount,
+          date,
+          type,
+          reference
+      })
+    });
 module.exports = router;
