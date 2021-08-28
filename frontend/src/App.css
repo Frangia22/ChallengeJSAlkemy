@@ -1,3 +1,222 @@
+/* Variables */
+:root {
+  --blue: #7090EA;
+  --blue-light: #334EC4;
+  --green: #169C94;
+  --sucess: #229b18;
+  --warning: #e50f0f;
+  --green-light: #B1E7E3;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+/* Generales */
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+img{
+  max-width: 100%;
+}
+.container {
+  max-width: 100%;
+}
+/* Navbar/Menu */
+.navbar {
+  background-color: var(--blue);
+  width: 100%;
+}
+.list { 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+.list-item {
+  flex-grow: 1;
+  padding: 10px 0;
+}
+.list-item-link {
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+  transition: 2s all;
+}
+.list-item-link:hover {
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 1.1em;
+    padding: 5px 20px;
+}
+/* Home */
+/*----------------------------------------------------------------- Table ----------------------------------------------*/
+.table{
+  margin: 10px auto;
+  text-align: center;
+  width: 75em;
+}
+.thead {
+  background-color: var(--blue); 
+}
+.tbody:nth-of-type(2n+1) {
+  background-color: var(--green-light);
+  color: var(--black);
+}
+.th, .td{
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  padding: 5px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/*----------------------------------------------------------------- Balance ----------------------------------------------*/
+.balance {
+  background-color: var(--green-light);
+  border-radius: 10px;
+  margin: 10px auto;
+  padding: 10px;
+  width: 30em;
+}
+.list-balance {
+  font-size: 1.4em;
+}
+.d-flex{
+  display: flex;
+  align-items: center;
+}
+.img-arrow {
+  width: 1.4em;
+  margin: auto 20px;
+}
+/*-------- Botones --------------------------------------------------------------------------------------------*/
+.add-product{
+  text-align: center;    
+  margin-bottom: 20px;
+}
+.btn{
+  border-radius: 8px;
+  padding: 4px 10px;
+  text-decoration: none;
+}
+.btn-edit{
+  background-color: var(--sucess);
+}
+.btn-delete{
+  background-color: var(--warning);
+}
+.btn-delete, .btn-edit {
+  border: 0;
+  color: var(--white);
+  font-weight: bold;
+}
+.btn-add{
+  background-color: var(--green-light);
+  color: var(--black);
+  font-weight: bold;
+}
+.btn-inicio{
+background-color: var(--blue);
+border-radius: 20px;
+border: none;
+color: var(--white);
+font-size: 0.9em;
+font-weight: bold;
+padding: 10px 5px;
+text-transform: uppercase;
+}
+.btn-inicio:hover{
+background-color: var(--gray);
+color: var(--black);
+}
+/* ------------------------------ Formularios ------------------------------------------------------------- */
+.form-group {
+  background-color: beige;
+  display: flex;
+  flex-wrap: wrap;  
+  text-align: left;  
+  margin: 10px auto;
+  width: 40em;
+}
+.form-group-6, .form-group-12 {
+  padding: 0 15px;
+}
+.form-group-6{
+  width: 50%;
+}
+.form-group-12{
+  width: 100%;
+}
+.form-label{
+  display: inline-block;
+  margin: 10px 0;
+}
+.form-control{
+  background: #e6e6e6;
+  border-radius: 20px;
+  border: none;
+  display: block;
+  padding: 10px 5px;
+  margin-bottom: var(--margin-bottom);  
+  width: 100%;  
+}
+/* ------------------------------ Margenes y padding -------------------------------------------------*/
+.mt-1{
+  margin: 10px auto;
+  width: 50%;
+}
+.py-2{
+  padding: 10px 0;
+}
+.px-2{
+  padding: 0 10px;
+}
+/* Footer */
+.footer {
+	background-color: var(--blue);
+	color: var(--white);
+	display: flex;
+	justify-content: space-evenly;
+	padding: 10px 0;
+}
+.link-port { 
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+}
+.link-port:hover{
+  text-decoration: underline;
+}
+/*  Text, margin, padding   */
+.text-success {
+  color: var(--sucess);
+}
+.text-warning {
+  color: var(--warning);
+}
+@media (max-width: 767px) {
+  /* Balance */
+  .balance {
+    width: 100%;
+  }
+  /* Table */
+  .table {
+    width: 100%;
+  }
+  .hide-field {
+    display: none;
+  }
+  /* Formulario */
+  .form-group{
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  
+  
+}
 .App {
   text-align: center;
 }
