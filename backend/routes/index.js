@@ -60,4 +60,38 @@ router.get('/balance', async (req, res) => {
           reference
       })
     });
+    //Delete budget
+    router.get('/deleteBudget/:id', (req, res) => {   
+      const idBudget = req.params.id;
+      console.log(req.params.id);          
+      db.personalBudget.destroy({
+        where: {
+            id: idBudget
+        }
+      })
+      res.send('Resultado del delete', deleteBudget);
+    });
+    //Edit budget
+    /* Edit operation GET */
+  router.get('/editBudget/:id', async (req, res) => {
+    const id = req.params.id;
+    console.log('El id es = ', id);
+     await db.personalBudget.findByPk(id)
+      .then(result => {
+          console.log('Res',result);
+      });
+      
+  });
+  /* Edit operation POST */
+  router.post('/editBudget/:id', async(req, res) => {   
+    const id = req.params.id;
+    console.log('ID del put = ', id);
+    const {concept, amount, type, reference} = req.body;
+    console.log('Resultado del body put ',req.body);
+    await db.personalBudget.update({concept, amount, type, reference},{
+      where: {
+          id
+      }
+  })
+  });
 module.exports = router;
