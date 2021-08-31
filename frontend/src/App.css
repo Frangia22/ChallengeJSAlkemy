@@ -162,6 +162,10 @@ color: var(--black);
   margin-bottom: var(--margin-bottom);  
   width: 100%;  
 }
+.auth { 
+  background-color: transparent; 
+  border: none;
+}
 /* ------------------------------ Margenes y padding -------------------------------------------------*/
 .mt-1{
   margin: 10px auto;
@@ -172,6 +176,9 @@ color: var(--black);
 }
 .px-2{
   padding: 0 10px;
+}
+.card-text{
+  text-align: center;
 }
 /* Footer */
 .footer {
